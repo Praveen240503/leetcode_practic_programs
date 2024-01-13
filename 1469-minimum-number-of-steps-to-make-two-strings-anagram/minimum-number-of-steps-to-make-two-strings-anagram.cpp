@@ -2,21 +2,18 @@ class Solution {
 public:
     int minSteps(string s, string t) {
         int ans=0;
-        map<char,int>smap;
-        map<char,int>tmap;
+        vector<int>tr(26,0);
+        vector<int>tr1(26,0);
+
         for(int i=0;i<s.size();i++){
-            smap[s[i]]++;
-            tmap[t[i]]++;
+            tr[s[i]-'a']++;
         }
-        
-        // for(auto it:smap)cout<<it.first<<" "<<it.second<<"\n";
-        // for(auto it:tmap)cout<<it.first<<" "<<it.second<<"\n";
-        
-        for(auto it:smap){
-            int a = tmap[it.first];
-            int b = it.second;
-            if(a<b)ans+=abs(a-b);
+        for(int i=0;i<t.size();i++){
+            tr1[t[i]-'a']++;
         }
-        return ans;
+        for(int i=0;i<26;i++){
+            ans+=abs(tr[i]-tr1[i]);
+        }
+        return ans/2;
     }
 };
