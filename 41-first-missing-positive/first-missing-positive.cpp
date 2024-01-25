@@ -8,7 +8,6 @@ public:
             if(nums[i]>ans){
                 return ans;
             }
-            if(nums[i]<0)continue;
             if(nums[i]==ans)ans++;
         }
         return ans;
