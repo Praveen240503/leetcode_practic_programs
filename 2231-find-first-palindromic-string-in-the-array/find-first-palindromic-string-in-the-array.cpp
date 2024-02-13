@@ -1,20 +1,16 @@
 class Solution {
 public:
-    bool palin(string s){
-        int n=s.size()-1,i=0;
-        while(i<n){
-            if(s[i]!=s[n])return false;
-            i++;
-            n--;
+    int palin(string s){
+        int n=s.size();
+        for(int i=0;i<n/2;i++){
+            if(s[i]!=s[n-i-1])return false;
         }
         return true;
     }
     string firstPalindrome(vector<string>& words) {
-        for(auto it:words)
-        {
-            if(palin(it))return it;
+        for(int i=0;i<words.size();i++){
+            if(palin(words[i]))return words[i];
         }
         return "";
     }
-
 };
