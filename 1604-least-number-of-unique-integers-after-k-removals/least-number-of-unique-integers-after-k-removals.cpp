@@ -5,7 +5,7 @@ public:
         cin.tie(NULL);
         cout.tie(NULL);
         int n=arr.size();
-        map<int,int>mp;
+        unordered_map<int,int>mp;
         for(int i=0;i<n;i++){
             mp[arr[i]]++;
         }
