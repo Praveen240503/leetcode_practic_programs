@@ -5,17 +5,15 @@ public:
         cin.tie(NULL);
         cout.tie(NULL);
         if(n==1)return 1;
-        unordered_map<int,int>mp1;
-        unordered_map<int,int>mp2;
+        vector<int>tr1(n+1,0);
+        vector<int>tr2(n+1,0);
         for(auto it:trust){
-            mp1[it[0]]++;
-            mp2[it[1]]++;
+            tr1[it[1]]++;
+            tr2[it[0]]++;
         }
         
-        for(auto it:mp2){
-            if(it.second == n-1 and mp1[it.first]==0){
-                return it.first;
-            }
+        for(int i=0;i<=n;i++){
+            if(tr1[i]==n-1 and tr2[i]==0)return i;
         }
         return -1;
     }
