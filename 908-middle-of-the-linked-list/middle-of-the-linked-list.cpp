@@ -11,16 +11,16 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        ios_base::sync_with_stdio(0);
-        cin.tie(nullptr);
-        cout.tie(nullptr);
-        ListNode *rabit=head;
-        ListNode *turtle=head;
-        while(rabit->next!=NULL and rabit->next->next!=NULL){
-            rabit=rabit->next->next;
+        ios_base:: sync_with_stdio(0);
+        cin.tie(NULL);
+        cout.tie(NULL);
+        ListNode* rabbit=head;
+        ListNode* turtle=head;
+        while(rabbit != NULL && rabbit->next != NULL )
+        {
+            rabbit=rabbit->next->next;
             turtle=turtle->next;
         }
-        if(rabit->next==NULL)return turtle;
-        return turtle->next;
+        return turtle;
     }
 };
