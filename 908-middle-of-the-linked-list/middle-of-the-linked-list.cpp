@@ -11,6 +11,9 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
+        ios_base::sync_with_stdio(0);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
         ListNode *rabit=head;
         ListNode *turtle=head;
         while(rabit->next!=NULL and rabit->next->next!=NULL){
