@@ -1,6 +1,9 @@
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        ios_base::sync_with_stdio(0);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
         vector<int> ans;
         unordered_set<int>one, two;
         for(int i = 0; i < nums1.size(); i++) {
