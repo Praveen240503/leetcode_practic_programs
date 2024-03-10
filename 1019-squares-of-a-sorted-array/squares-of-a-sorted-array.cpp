@@ -4,11 +4,21 @@ public:
         ios_base::sync_with_stdio(0);
         cin.tie(NULL);
         cout.tie(NULL);
-        int n= nums.size();
-        for(int i = 0; i < n; i++) {
-            nums[i] = nums[i] * nums[i];
+        vector<int> tr(nums.size());
+        int l = 0;
+        int r = nums.size() - 1;
+        int ind = r;
+        while (ind >= 0) {
+            if (abs(nums[l]) > abs(nums[r])) {
+                tr[ind] = nums[l] * nums[l];
+                l++;
+                ind--;
+            } else {
+                tr[ind] = nums[r] * nums[r];
+                r--;
+                ind--;
+            }
         }
-        sort(nums.begin(),nums.end());
-        return nums;
+        return tr;
     }
 };
