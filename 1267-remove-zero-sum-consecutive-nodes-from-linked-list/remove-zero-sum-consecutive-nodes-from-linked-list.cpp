@@ -11,6 +11,9 @@
 class Solution {
 public:
     ListNode* removeZeroSumSublists(ListNode* head) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
         ListNode* temp = new ListNode(0, head);
         int prefix = 0;
         unordered_map<int, ListNode*> prefixMap;
