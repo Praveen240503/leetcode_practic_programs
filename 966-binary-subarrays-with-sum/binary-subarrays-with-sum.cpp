@@ -1,6 +1,9 @@
 class Solution {
 public:
     int numSubarraysWithSum(vector<int>& nums, int goal) {
+        ios_base::sync_with_stdio(0);
+        cin.tie(NULL);
+        cout.tie(NULL);
         int i = 0, j = 0;
         int t = 0, n = nums.size(), c = 0;
         while(j < n){
