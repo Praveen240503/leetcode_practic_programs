@@ -1,6 +1,9 @@
 class Solution {
 public:
     int findMaximizedCapital(int k, int w, vector<int>& profits, vector<int>& capital) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(0);
+        cout.tie(0);
         vector<pair<int,int>>pairs;
         for(int i = 0; i < profits.size(); i++){
             pairs.push_back({ capital[i],profits[i],});
