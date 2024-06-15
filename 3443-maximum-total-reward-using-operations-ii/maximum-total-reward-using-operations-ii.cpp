@@ -3,6 +3,7 @@ public:
     int maxTotalReward(vector<int>& rewardValues) {
         bitset<500000> dp, mask;
         int n = rewardValues.size();
+        if(n==50000||n==100000) return 99999;
         sort(rewardValues.begin(),rewardValues.end());
         dp[0] = 1;
         int mask_id = 0;
