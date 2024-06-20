@@ -1,6 +1,13 @@
+auto init = [] () {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+};
+
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
+
         int n = nums.size();
         int ans = INT_MIN;
         int cursum = 0;
