@@ -1,5 +1,7 @@
 class Solution {
+
 public:
+    
     int canWePlace(vector<int>& arr, int dist, int balls) {
         int count = 1;
         int last = arr[0];
@@ -15,6 +17,7 @@ public:
         return 0;
     }
     int maxDistance(vector<int>& position, int m) {
+        ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);      
         sort(position.begin(), position.end());
         int low = 1;
         int high = (position.back() - position[0]) / (m - 1);
