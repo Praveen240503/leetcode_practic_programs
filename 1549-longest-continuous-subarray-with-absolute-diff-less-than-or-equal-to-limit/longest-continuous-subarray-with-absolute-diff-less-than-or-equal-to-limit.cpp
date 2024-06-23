@@ -1,6 +1,9 @@
 class Solution {
 public:
     int longestSubarray(vector<int>& nums, int limit) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
         deque<int> maxq;
         deque<int> minq;
         int n = nums.size();
