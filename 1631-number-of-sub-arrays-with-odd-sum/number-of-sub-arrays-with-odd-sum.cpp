@@ -1,7 +1,10 @@
 class Solution {
 public:
+    int MOD = 1e9 + 7;
     int numOfSubarrays(vector<int>& arr) {
-        const int MOD = 1e9 + 7;
+        ios_base::sync_with_stdio;
+        cin.tie(NULL);
+        cout.tie(NULL);
         int count = 0, prefixSum = 0;
         int oddCount = 0, evenCount = 1;
 
