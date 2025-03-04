@@ -11,6 +11,9 @@ public:
         return {x,c};
     }
     vector<int> pivotArray(vector<int>& nums, int pivot) {
+        ios_base::sync_with_stdio;
+        cin.tie(NULL);
+        cout.tie(NULL);
         vector<int>left,right;
         vector<int> piv = getpivind(nums, pivot);
         int n = nums.size();
