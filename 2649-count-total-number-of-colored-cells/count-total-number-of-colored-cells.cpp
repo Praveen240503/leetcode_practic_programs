@@ -1,6 +1,10 @@
 class Solution {
 public:
     long long coloredCells(int n) {
-        return 2LL*n*(n-1)+1;
+        long long x = 1;
+        for(int i = 2 ; i <= n ; i++){
+            x += (4 * (i - 1));
+        }
+        return x;
     }
 };
