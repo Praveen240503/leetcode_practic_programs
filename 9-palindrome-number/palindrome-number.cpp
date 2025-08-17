@@ -1,17 +1,16 @@
 class Solution {
 public:
-    bool isPalindrome(long int x) {
-        long s=0,v=0;
-        long int  n=x;
-        if(n<0) return false;
-        while(n){
-            s=n%10;
-            v=v*10+s;
-            n=n/10;
+    bool isPalindrome( int x) {
+        long revnum=0;
+         int  tr=x;
+        if(tr<0) return false;
+        if(tr<10)return true;
+        while(tr){
+            int tem=tr%10;
+            revnum=revnum*10+tem;
+            tr=tr/10;
         }
-        if(v==x){
-            return true;
-        }
+        if(revnum==x)return true;
         return false;
         
     }
